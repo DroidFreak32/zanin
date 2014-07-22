@@ -1,0 +1,8 @@
+# system.prop for zanin
+rild.libpath=/system/lib/libbrcm_ril.so
+ro.sf.lcd_density=120
+ro.lcd_brightness=160
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+persist.service.adb.enable=1
