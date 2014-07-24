@@ -46,8 +46,11 @@ BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
 HAVE_HTC_AUDIO_DRIVER := true
 BOARD_USES_GENERIC_AUDIO := true
 #########################################################################
-BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
+BBOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
+WIFI_DRIVER_FW_STA_PATH := "/system/etc/wifi/bcmdhd_sta.bin_b2"
+WIFI_DRIVER_FW_AP_PATH := "/system/etc/wifi/bcmdhd_apsta.bin_b2"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin_b2 nvram_path=/system/etc/wifi/nvram.txt"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
 
