@@ -16,30 +16,28 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/samsung/zanin/init/init.rc:root/init.rc \
-    device/samsung/zanin/init/init.cm.rc:root/init.cm.rc \
-    device/samsung/zanin/init/fstab.rhea_ss_zanin:root/fstab.rhea_ss_zanin \
-    device/samsung/zanin/init/init.bcm2165x.usb.rc:root/init.bcm2165x.usb.rc \
-    device/samsung/zanin/init/init.bt.rc:root/init.bt.rc \
-    device/samsung/zanin/init/init.cm.rc:root/init.cm.rc \
-    device/samsung/zanin/init/init.goldfish.rc:root/init.goldfish.rc \
-    device/samsung/zanin/init/init.log.rc:root/init.log.rc \
-    device/samsung/zanin/init/init.rhea_ss_zanin.rc:root/init.rhea_ss_zanin.rc \
-    device/samsung/zanin/init/init.trace.rc:root/init.trace.rc \
-    device/samsung/zanin/init/init.usb.rc:root/init.usb.rc \
-    device/samsung/zanin/init/init.zram.sh:root/init.zram.sh \
-    device/samsung/zanin/init/lpm.rc:root/lpm.rc \
-    device/samsung/zanin/init/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
-    device/samsung/zanin/init/ueventd.rc:root/ueventd.rc \
-    device/samsung/zanin/init/ueventd.rhea_ss_zanin.rc:root/ueventd.rhea_ss_zanin.rc 
-#ADDING SOME PERMISSIONS
-PRODUCT_COPY_FILES += \
-    device/samsung/permissions/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    device/samsung/permissions/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    device/samsung/permissions/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    device/samsung/permissions/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    device/samsung/permissions/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
-    device/samsung/permissions/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
+    init/init.rc:root/init.rc \
+    init/init.cm.rc:root/init.cm.rc \
+    init/fstab.rhea_ss_zanin:root/fstab.rhea_ss_zanin \
+    init/init.bcm2165x.usb.rc:root/init.bcm2165x.usb.rc \
+    init/init.bt.rc:root/init.bt.rc \
+    init/init.cm.rc:root/init.cm.rc \
+    init/init.goldfish.rc:root/init.goldfish.rc \
+    init/init.log.rc:root/init.log.rc \
+    init/init.rhea_ss_zanin.rc:root/init.rhea_ss_zanin.rc \
+    init/init.trace.rc:root/init.trace.rc \
+    init/init.usb.rc:root/init.usb.rc \
+    init/init.zram.sh:root/init.zram.sh \
+    init/lpm.rc:root/lpm.rc \
+    init/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
+    init/ueventd.rc:root/ueventd.rc \
+    init/ueventd.rhea_ss_zanin.rc:root/ueventd.rhea_ss_zanin.rc \
+    permissions/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    permissions/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    permissions/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+    permissions/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    permissions/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
+    permissions/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
 
 $(call inherit-product, build/target/product/full.mk)
 
