@@ -14,7 +14,6 @@ USE_CAMERA_STUB := true
 ########################################################################                                                                      
 # inherit from the proprietary version
 -include vendor/samsung/zanin/BoardConfigVendor.mk 
-#-include device/samsung/zanin/device_zanin.mk 
 ########################################################################                                                                      
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := rhea
@@ -26,7 +25,6 @@ TARGET_BOOTLOADER_BOARD_NAME := zanin
 #########################################################################
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
-
 BOARD_KERNELIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 939524096
@@ -41,19 +39,15 @@ BOARD_HAS_SDCARD_INTERNAL:= true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
-#BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/samsung/tassve/recovery/recovery_ui.c
 #########################################################################
 HAVE_HTC_AUDIO_DRIVER := true
 BOARD_USES_GENERIC_AUDIO := true
 #########################################################################
-BBOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_FW_STA_PATH := "/system/etc/wifi/bcmdhd_sta.bin_b2"
-WIFI_DRIVER_FW_AP_PATH := "/system/etc/wifi/bcmdhd_apsta.bin_b2"
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin_b2 nvram_path=/system/etc/wifi/nvram.txt"
+#WIFI_DRIVER_FW_STA_PATH := "/system/etc/wifi/bcmdhd_sta.bin_b2"
+#WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin_b2 nvram_path=/system/etc/wifi/nvram.txt"
 WIFI_DRIVER_MODULE_NAME := "dhd"
-
-
 
 # Set /system/bin/sh to ash, not mksh, to make sure we can switch back.
 TARGET_SHELL := ash
@@ -87,13 +81,13 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.config.sec_storage=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
 
 
-#twrp
-#DEVICE_RESOLUTION := 240x240
-#RECOVERY_GRAPHICS_USE_LINELENGTH := true
-#TW_INTERNAL_STORAGE_PATH := "/data/media"
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-#TW_EXTERNAL_STORAGE_PATH := "/sdcard"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-#TW_INCLUDE_INJECTTWRP := true
-#TW_DEFAULT_EXTERNAL_STORAGE := true
-#TW_FLASH_FROM_STORAGE := true
+#twrp recovery(testing)
+DEVICE_RESOLUTION := 240x320
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_INCLUDE_INJECTTWRP := true
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_FLASH_FROM_STORAGE := true
