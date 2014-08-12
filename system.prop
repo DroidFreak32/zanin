@@ -6,3 +6,6 @@ ro.debuggable=1
 persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
 persist.service.adb.enable=1
+service.brcm.fm.start_snr=41
+service.brcm.fm.stop_snr=20
+ro.com.google.gmsversion=4.1_r5
